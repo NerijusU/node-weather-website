@@ -17,10 +17,10 @@ weatherForm.addEventListener('submit', (e) => {
             if (data.error) {
                 messageOne.textContent = data.error
             } else {
-                const {temperature, feelslike, description} = data.forecast
+                const {temperature, feelslike, description, windspeed} = data.forecast
                 messageOne.textContent = data.location
                 console.log(data.forecast)
-                messageTwo.textContent = `temperature: ${temperature}; feelslike: ${feelslike}; description: ${description}`
+                messageTwo.textContent = `temperature: ${temperature}; feelslike: ${feelslike}; description: ${description}; wind speed: ${windspeed}`
             }
         })
 })
