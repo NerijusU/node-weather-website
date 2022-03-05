@@ -23,8 +23,7 @@ app.use(express.static(publicDirectoryPath))
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather App',
-        name: 'Nerijus Urbonas',
-        __dirname
+        name: 'Nerijus Urbonas'
     })
 } )
 
@@ -46,7 +45,7 @@ app.get('/help', (req, res) => {
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
-            error: 'You must provide an adress'
+            error: 'You must provide an address'
         })
     }
 
